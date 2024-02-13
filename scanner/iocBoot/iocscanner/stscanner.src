@@ -1,0 +1,3 @@
+#!/bin/bash
+
+$(ETHERCAT)/bin/linux-x86_64/scanner $(INSTALL)/data/scanner.xml /tmp/scanner

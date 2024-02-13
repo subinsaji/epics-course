@@ -1,0 +1,172 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 600
+y 267
+w 500
+h 600
+font "arial-medium-r-18.0"
+ctlFont "arial-medium-r-18.0"
+btnFont "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 14
+ctlFgColor2 index 0
+ctlBgColor1 index 0
+ctlBgColor2 index 14
+topShadowColor index 0
+botShadowColor index 14
+endScreenProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 201
+y 21
+w 85
+h 47
+fgColor index 14
+bgColor index 0
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(user):freqMenu"
+font "arial-medium-r-18.0"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 165
+y 365
+w 95
+h 21
+font "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+id "Text Control"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 159
+y 325
+w 99
+h 21
+font "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+id "Offset"
+endObjectProperties
+
+# (Stripchart)
+object StripClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+# Geometry
+x 27
+y 79
+w 441
+h 449
+# Trace Properties
+numPvs 6
+yPv {
+  0 "$(user):function"
+}
+plotColor {
+  0 index 77
+  1 index 52
+  2 index 61
+  3 index 55
+  4 index 40
+  5 index 19
+}
+# Operating Modes
+updateTime 60
+# Appearance
+fgColor index 14
+bgColor index 0
+textColor index 14
+font "arial-medium-r-18.0"
+updateMs 1000
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 45
+y 544
+w 57
+h 21
+controlPv "$(user):offset"
+font "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+id "Offset"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 152
+y 546
+w 55
+h 21
+controlPv "$(user):amplitude"
+font "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
