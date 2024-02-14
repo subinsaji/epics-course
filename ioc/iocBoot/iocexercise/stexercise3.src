@@ -18,7 +18,7 @@ dbLoadDatabase("dbd/exercise.dbd")
 exercise_registerRecordDeviceDriver(pdbbase)
 
 # Connect to the EtherCAT scanner
-# ecAsynInit("/tmp/scanner", 100000)
+ecAsynInit("/tmp/scanner", 100000)
 
 ## Load record instances
 dbLoadRecords("db/exercise3.db","user=wks59344")

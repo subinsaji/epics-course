@@ -10,14 +10,17 @@ record(ai, "$(user):EtherCAT") {
   field(DTYP, "asynInt32")
   field(FLNK, "$(user):calcout")
   field(INP, "@asyn(ERIO.1)AIStandardChannel1.Value")
+  field(LINR, "LINEAR")
   field(EGUF, "0")
   field(EGUL, "100")
   field(EGU, "Centrigrade")
+  field(HHSV, "MAJOR")
 }
 
 
 record(ao, "$(user):HIHI_Limit") {
-  field(VAL, "90")
+  field(PINI, "YES")
+  field(VAL, "60")
   field(OUT, "$(user):EtherCAT.HIHI")
 }
 
@@ -26,11 +29,13 @@ record(bo, "$(user):Interlock") {
   field(DTYP, "asynInt32")
   field(VAL, "1")
   field(OUT, "@asyn(ERIO.4)Channel1.Output")
+  field(ZNAM, "SET")
+  field(ONAM, "CLEAR")
 }
 
 
 record(calcout, "$(user):calcout") {
-  field(CALC, "A=3")
+  field(CALC, "(A=3)?1:0")
   field(INPA, "$(user):EtherCAT.STAT")
   field(OUT, "$(user):Interlock PP")
   field(OOPT, "When Non-zero")
@@ -38,19 +43,19 @@ record(calcout, "$(user):calcout") {
 }
 
 #! Further lines contain data used by VisualDCT
-#! View(2525,2711,1.3)
-#! Record("$(user):EtherCAT",2440,2187,0,1,"$(user):EtherCAT")
+#! View(2567,2499,1.3)
+#! Record("$(user):EtherCAT",2382,1999,0,1,"$(user):EtherCAT")
 #! Field("$(user):EtherCAT.HIHI",16777215,0,"$(user):EtherCAT.HIHI")
-#! Field("$(user):EtherCAT.FLNK",16777215,1,"$(user):EtherCAT.FLNK")
+#! Field("$(user):EtherCAT.FLNK",16777215,0,"$(user):EtherCAT.FLNK")
 #! Link("$(user):EtherCAT.FLNK","$(user):calcout")
-#! Field("$(user):EtherCAT.STAT",16777215,1,"$(user):EtherCAT.STAT")
-#! Record("$(user):HIHI_Limit",2160,2236,0,1,"$(user):HIHI_Limit")
+#! Field("$(user):EtherCAT.STAT",16777215,0,"$(user):EtherCAT.STAT")
+#! Record("$(user):HIHI_Limit",2068,2036,0,1,"$(user):HIHI_Limit")
 #! Field("$(user):HIHI_Limit.OUT",16777215,1,"$(user):HIHI_Limit.OUT")
 #! Link("$(user):HIHI_Limit.OUT","$(user):EtherCAT.HIHI")
-#! Record("$(user):Interlock",3020,2562,0,1,"$(user):Interlock")
+#! Record("$(user):Interlock",2395,2255,0,1,"$(user):Interlock")
 #! Field("$(user):Interlock.VAL",16777215,0,"$(user):Interlock.VAL")
-#! Record("$(user):calcout",2740,2294,0,0,"$(user):calcout")
+#! Record("$(user):calcout",2040,2220,0,1,"$(user):calcout")
 #! Field("$(user):calcout.OUT",16777215,1,"$(user):calcout.OUT")
 #! Link("$(user):calcout.OUT","$(user):Interlock.VAL")
-#! Field("$(user):calcout.INPA",16777215,0,"$(user):calcout.INPA")
+#! Field("$(user):calcout.INPA",16777215,1,"$(user):calcout.INPA")
 #! Link("$(user):calcout.INPA","$(user):EtherCAT.STAT")
