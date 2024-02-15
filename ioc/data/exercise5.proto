@@ -1,0 +1,10 @@
+OutTerminator = LF CR
+InTerminator = CR
+
+exercise5 {
+
+    out "DA 1"; in "1 %6i"
+
+}
+
+
