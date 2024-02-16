@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# These prevent messages about multiple connections on a workstation
+# with more than one network interface
+export EPICS_CA_ADDR_LIST=localhost
+export EPICS_CA_AUTO_ADDR_LIST=NO
+
+# To pick up the motor record screen
+export EDMDATAFILES=".:data:/dls_sw/prod/R3.14.12.7/support/motor/7-0dls7/data"
+
+edm -x -m "user=wks59344" exercise8.edl &
+motor=wks59344:Motor
